@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{margin: 0;padding: 0;
+        border: 1px solid red;}
+        ul,li,ol{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+
+        .list1{}
+
+        .list1 li{
+            float: left;
+        }
+        
+        .list1 li a{
+            display: block;
+            padding: 20px;
+            background-color: rgb(92, 5, 19);
+        }
+
+        .clear_fix::before, .clear_fix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box1{
+            background-color: yellow;
+            width: 300px;
+            float: left;
+        }
+
+        .box2{
+            float: left;
+            background-color: pink;
+            width: 500px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list1 clear_fix">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+        <li><a href="#">menu6</a></li>
+        <li><a href="#">menu7</a></li>
+    </ul>
+
+    <div class="box1">adsfadfadfadfasdf</div>
+
+    <div class="box2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio sint laudantium neque velit nobis nisi incidunt praesentium animi, dolorem assumenda ab, obcaecati quae labore, aliquid qui aut non commodi recusandae.</div>
+
+    <div class="box3 clear_fix">adfadfadsfadfadf</div>
+</body>
+</html>
