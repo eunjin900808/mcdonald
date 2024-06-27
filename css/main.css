@@ -1,11 +1,14 @@
 @charset "utf-8";
 
 html, body{
-    /* height: 100%; */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 #wrap{
-    /* height: 100%; */
+    height: 100%;
+    width: 1920px;
+    margin: 0 auto;
 }
 
 /* header 영역 */
@@ -15,6 +18,8 @@ html, body{
     height: 140px;
     background-color: pink;
     position: fixed;
+    left: 0;
+    top: 0;
 
 }
 
@@ -155,20 +160,23 @@ html, body{
     background: url(../img/ico_search.png) no-repeat;
     background-size: 80%;
     background-position: center center;
+    text-indent: -9999px;
 }
 
 
 /* content 영역 */
 #content{
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px;
     padding-top: 140px;
+    margin: 0 auto;
     /* 화면을 줄였을때 가운데로오게하기 위해서 걸어줌 */
 }
 
 .slide_img{
     height: 540px;
 }
-
+.slide_img img{width: 100%;}
 
 /* live 영역 */
 .live{
@@ -218,4 +226,110 @@ html, body{
     text-align: center;
     margin: 40px 0 30px 0;
     /* border: 1px solid red; */
+}
+
+
+/* footer 영역 */
+
+#footer{
+    width: 100%;
+    max-width: 1920px;
+    /* width: 100%; */
+    background-color: #292929;
+    font-size: 18px;
+    padding: 40px 0;
+}
+
+.foot_inner{
+    width: 1168px;
+    margin: 0 auto;
+}
+
+.f_menu{
+    float: left;
+}
+
+.f_menu li{}
+.f_menu li a{
+    color: white;
+    display: block;
+    padding: 3px 0;
+    font-weight: bold;
+}
+
+.yellow{
+/* .f_menu li a.yellow{} */
+    color: yellow !important;
+}
+
+.info{
+    float: left;
+    margin-left: 80px;
+}
+
+.info li{
+    padding: 3px 0;
+    color: #aaa;
+}
+
+.sns{
+    float: right;
+}
+
+.sns li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.sns li a{
+    display: block;
+    /* 너비, 높이를 주기 위해서 블럭으로 걸어줌 */
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/ico_sns.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+
+li.sns_1 a{}
+
+li.sns_2 a{
+    background-position: 0 -40px;
+}
+
+li.sns_3 a{
+    background-position: 0 -80px;
+}
+
+li.sns_4 a{
+    background-position: 0 -120px;
+}
+
+li.sns_5 a{
+    width: 100px;
+    height: 80px;
+    background-image: url(../img/mark.png) !important;
+    /* background-repeat: no-repeat;
+    sns li a에 걸어줬기때문에 안써줘도됨 */
+    background-position: 0 0;
+    background-size: 100px;
+}
+
+
+/* top 영역 */
+
+.top{
+    width: 120px;
+    height: 100%;
+    /* border: 1px solid red; */
+    position: fixed;
+    left: calc(50% + (1168px / 2) + 50px);
+    top: 550px;
+}
+
+.top a{
+    display: block;
+    text-align: center;
+    margin: 30px 0;
 }
